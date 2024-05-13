@@ -27,7 +27,7 @@ const UserProfile = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `https://fourwheel-backend-for-render.onrender.com/api/v1/testdrive/rider/${user._id}`,
+          `http://localhost:3601/api/v1/testdrive/rider/${user._id}`,
           {
             withCredentials: true,
           }
@@ -49,7 +49,7 @@ const UserProfile = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `https://fourwheel-backend-for-render.onrender.com/api/v1/user/updateprofile/${user._id}`,
+        `http://localhost:3601/api/v1/user/updateprofile/${user._id}`,
         editData,
         {
           withCredentials: true,

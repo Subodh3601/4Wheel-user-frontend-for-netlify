@@ -36,12 +36,9 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get(
-        "https://fourwheel-backend-for-render.onrender.com/api/v1/user/rider/logout",
-        {
-          withCredentials: true,
-        }
-      )
+      .get("http://localhost:3601/api/v1/user/rider/logout", {
+        withCredentials: true,
+      })
       .then((res) => {
         toast.success(res.data.message);
         // console.log("res.data.message", res.data.message);

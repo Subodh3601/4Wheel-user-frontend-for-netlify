@@ -30,14 +30,10 @@ const Register = () => {
       formData.append("role", "user");
       // console.log("formDataaaaaaaa",formData)
       await axios
-        .post(
-          "https://fourwheel-backend-for-render.onrender.com/api/v1/user/register",
-          formData,
-          {
-            withCredentials: true,
-            headers: { "Content-Type": "multipart/form-data" },
-          }
-        )
+        .post("http://localhost:3601/api/v1/user/register", formData, {
+          withCredentials: true,
+          headers: { "Content-Type": "multipart/form-data" },
+        })
         .then((res) => {
           console.log(res);
           toast.success(res.data.message);

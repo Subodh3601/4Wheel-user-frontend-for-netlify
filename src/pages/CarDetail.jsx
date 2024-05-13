@@ -87,12 +87,9 @@ const CarDetail = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const { data } = await axios.get(
-          "https://fourwheel-backend-for-render.onrender.com/api/v1/cars/",
-          {
-            withCredentials: true,
-          }
-        );
+        const { data } = await axios.get("http://localhost:3601/api/v1/cars/", {
+          withCredentials: true,
+        });
         setCars(data.cars);
         console.log("cars", data.cars);
       } catch (error) {

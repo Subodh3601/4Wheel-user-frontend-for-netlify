@@ -22,7 +22,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://fourwheel-backend-for-render.onrender.com/api/v1/user/rider/me",
+          "http://localhost:3601/api/v1/user/rider/me",
           {
             withCredentials: true,
           }

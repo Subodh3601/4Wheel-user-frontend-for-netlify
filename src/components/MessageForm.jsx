@@ -14,7 +14,7 @@ const MessageForm = () => {
     try {
       await axios
         .post(
-          "https://fourwheel-backend-for-render.onrender.com/api/v1/message/send",
+          "http://localhost:3601/api/v1/message/send",
           { firstname, lastname, email, phone, message },
           {
             withCredentials: true,

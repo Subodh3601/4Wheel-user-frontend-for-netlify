@@ -32,12 +32,9 @@ const TestDriveForm = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
     const fetchCars = async () => {
-      const { data } = await axios.get(
-        "https://fourwheel-backend-for-render.onrender.com/api/v1/cars/",
-        {
-          withCredentials: true,
-        }
-      );
+      const { data } = await axios.get("http://localhost:3601/api/v1/cars/", {
+        withCredentials: true,
+      });
       setCars(data.cars);
       // console.log("ddddddddddddddddd", data)
       // console.log("aaaaaaaaaaaaaaaaaaaa",data.cars)
@@ -50,7 +47,7 @@ const TestDriveForm = () => {
     try {
       // console.log("date",date)
       const { data } = await axios.post(
-        "https://fourwheel-backend-for-render.onrender.com/api/v1/testdrive/book",
+        "http://localhost:3601/api/v1/testdrive/book",
         {
           firstname,
           lastname,
